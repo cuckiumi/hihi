@@ -28,3 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3000);
   }
 });
+function showNextPage(event) {
+  event.stopPropagation();
+  document.querySelector(".inside").classList.add("hide");
+  document.querySelector(".next-section").classList.add("show-next");
+  document.querySelector(".next-button").style.display = "none";
+}
