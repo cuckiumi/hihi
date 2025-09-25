@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://nabil4507.github.io/my-birthday/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Gift Card</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffe6e6;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+        .card-container {
+            position: relative;
+            width: 600px;
+            height: 700px;
+            perspective: 1000px;
+        }
+        .card {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            overflow: hidden;
+            transition: transform 0.5s ease-in-out;
+        }
+        .cover {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #ff6699;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            transform-origin: left;
+            transition: transform 0.5s ease-in-out;
+        }
+        .card.open .cover {
+            transform: rotateY(-120deg);
+        }
+        .inside {
+            padding: 40px;
+            text-align: center;
+            font-size: 22px;
+            color: #333;
+            display: none;
+            position: relative;
+        }
+        .card.open .inside {
+            display: block;
+        }
+        .next-section {
+            display: none;
+            text-align: center;
+            font-size: 22px;
+            color: #333;
+        }
+        .card.open .next-section.show-next {
+            display: block;
+        }
+        .card.open .inside.hide {
+            display: none;
+        }
+        .next-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff6699;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
+        .card.open .next-button {
+            display: inline-block;
+        }
+        /* Decorative Images Outside the Card */
+        .image {
+            position: absolute;
+            width: 80px;
+        }
+        .image-top-left { top: 5%; left: 5%; width: 200px;}
+        .image-top-right { top: 5%; right: 5%; width: 200px;}
+        .image-bottom-left { bottom: 5%; left: 5%; width: 300px;}
+        .image-bottom-right { bottom: 5%; right: 5%; width: 150px; }
+        .image-center-top { top: 20px; left: 50%; transform: translateX(-50%); width: 150px; }
+        .image-left-center { top: 50%; left: 300px; transform: translateY(-50%); width: 150px; }
+        .image-right-center { top: 50%; right: 300px; transform: translateY(-50%); width: 150px; }
+        
+        /* Images Inside the Card */
+        .inside img {
+            position: absolute;
+            width: 100px;
+            border-radius: 15px;
+        }
+        .inside .image-top-left { top: -100px; left: 30px; }
+        .inside .image-bottom-right { bottom: -80px; right: 40px; }
+
+        .next-section img {
+            position: absolute;
+            width: 200px;
+            border-radius: 15px;
+        }
+            .image-center-top { top: 20px; left: 50%; transform: translateX(-50%); width: 150px; }
+    </style>
+    <script>
+        function showNextPage(event) {
+            event.stopPropagation();
+            document.querySelector(".inside").classList.add("hide");
+            document.querySelector(".next-section").classList.add("show-next");
+            document.querySelector(".next-button").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <!-- Decorative Images Outside the Card -->
+    <img src="./Birthday Gift Card_files/jett gif.gif" alt="jett" class="image image-top-left">
+    <img src="./Birthday Gift Card_files/f811fe79-9cc3-490a-a679-5e5fb43822b3.jpeg" alt="smile cat" class="image image-top-right">
+    <img src="./Birthday Gift Card_files/il_fullxfull.4947033170_jjso.webp" alt="brim butt" class="image image-bottom-left">
+    <img src="./Birthday Gift Card_files/download.jpeg" alt="jett smile" class="image image-bottom-right">
+    <img src="./Birthday Gift Card_files/download (1).jpeg" alt="jett nose" class="image image-center-top">
+    <img src="./Birthday Gift Card_files/98270abb-dc05-4a91-a91b-7513db788314.jpeg" alt="duck" class="image image-left-center">
+    <img src="./Birthday Gift Card_files/718c283f-6d7a-40b1-9636-78f03d3fff97.jpeg" alt="cat smoke" class="image image-right-center">
+
+    <div class="card-container">
+        <div class="card open" onclick="this.classList.toggle(&#39;open&#39;)">
+            <div class="cover">🎉 Click me! 🎂</div>
+            <div class="inside hide">
+
+                <img src="./Birthday Gift Card_files/c6b5c9ff-5d4e-4e1c-aee7-b2e77d295402.jpeg" alt="flower pink" class="image-top-left">
+                <img src="./Birthday Gift Card_files/Naturel.jpeg" alt="flower view" class="image-bottom-right">
+
+                <p>🎉Happy belated Birthday Umi !!🎂</p> 
+                <p>I wish you good health and happiness with full of joy in your life.</p>
+                <p>I know we just met for a few days, but I somehow cultivated a deep sense of care for you </p>
+                <p>(Tôi biết chúng ta chỉ gặp nhau trong vài ngày nhưng bằng cách nào đó tôi đã nuôi dưỡng một cảm giác quan tâm sâu sắc dành cho bạn)</p>
+                <button class="next-button" onclick="showNextPage(event)" style="display: none;">Next</button>
+            </div>
+            <div class="next-section show-next">
+
+                <img src="./Birthday Gift Card_files/08c8f0c6-5dfc-4397-974b-df40a4602dd8.jpeg" alt="cute cat" class="image-center-top">
+
+                <p>🎁 Just a reminder 🎁</p>
+                <p>Don't stress too much, oki? Make sure to eat and sleep enough.</p>
+                <p>Remember to always stay calm in any situation in life</p>
+            </div>
+        </div>
+    </div>
+
+
+</body></html>
